@@ -14,7 +14,7 @@ export default defineConfig({
     // rollupOptions: {
     //   input: "./src/TerhoButton.tsx",
     //   output: {
-    //     file: "./dist/TerhoButton.js",
+    //     file: "TerhoButton",
     //   },
     // },
   },
