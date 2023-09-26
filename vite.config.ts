@@ -7,9 +7,9 @@ export default defineConfig({
   build: {
     lib: {
       name: "TerhoButton",
-      entry: "./src/TerhoButton.tsx", // Specify the path to your custom entry file
-      formats: ["cjs"], // Output format as CommonJS module
-      fileName: () => "TerhoButton.js", // Output filename
+      entry: "./src/TerhoButton.tsx",
+      formats: ["es"],
+      fileName: () => "TerhoButton.js",
     },
     // rollupOptions: {
     //   input: "./src/TerhoButton.tsx",

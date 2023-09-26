@@ -1,5 +1,13 @@
-function TerhoButton() {
-  return <button>TerhoButton</button>;
+import "./style.scss";
+
+export interface TerhoButtonProps {
+  onClick?: () => void;
 }
 
-export default TerhoButton;
+export default function TerhoButton(props: TerhoButtonProps) {
+  return (
+    <button className="MyButton" onClick={props.onClick}>
+      TerhoButton
+    </button>
+  );
+}
