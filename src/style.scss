@@ -1,6 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
 .MyButton {
+  font-size: 14px;
+  height: 32px;
+  padding: 4px 15px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid transparent;
-  border-radius: 5px;
   background-color: #38be1a;
   color: white;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+.MyButton:hover {
+  background-color: #4be229;
+}
+
+.MonoFont {
+  font-family: "Roboto Mono", monospace;
 }

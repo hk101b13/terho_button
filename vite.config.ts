@@ -1,21 +1,31 @@
 // vite.config.js (or vite.config.ts if using TypeScript)
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    cssInjectedByJsPlugin({
+      jsAssetsFilterFunction: function customJsAssetsfilterFunction(
+        outputChunk
+      ) {
+        return outputChunk.fileName == "index.js";
+      },
+    }),
+  ],
   build: {
     lib: {
-      name: "TerhoButton",
-      entry: "./src/TerhoButton.tsx",
+      name: "customized-module",
+      entry: "./src/index.tsx",
       formats: ["es"],
-      fileName: () => "TerhoButton.js",
+      fileName: () => "index.js",
     },
-    // rollupOptions: {
-    //   input: "./src/TerhoButton.tsx",
-    //   output: {
-    //     file: "TerhoButton",
-    //   },
-    // },
+    rollupOptions: {
+      input: "./src",
+      output: {
+        dir: "./dist",
+      },
+    },
   },
 });

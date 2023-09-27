@@ -1,7 +1,7 @@
 {
-  "name": "terho-new-button-2",
-  "version": "0.0.9",
-  "main": "./src/TerhoButton.tsx",
+  "name": "customized-module",
+  "version": "0.0.6",
+  "main": "./dist/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/hk101b13/terho_button"
@@ -13,8 +13,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "consola": "^3.2.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "vite-plugin-css-injected-by-js": "^3.3.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
